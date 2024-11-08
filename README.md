@@ -233,7 +233,7 @@ Open [`index.html`](./index.html) and fill your information, there are 6 section
       <i class="fa-brands fa-twitter"></i>
     </a>
     <a href="#!" target="_blank">
-      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-artstation"></i>
     </a>
     <a href="#!" target="_blank">
       <i class="fa-brands fa-codepen"></i>
