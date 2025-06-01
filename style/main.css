@@ -29,6 +29,7 @@ h1 {
   font-weight: 700;
 }
 
+
 p,
 a {
   font-size: 1.6rem;
@@ -681,3 +682,37 @@ section .row span {
     transform: none;
   }
 }/*# sourceMappingURL=main.css.map */
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+.tab-btn {
+  padding: 12px 24px;   /* tamaño interno más grande */
+  font-size: 3ch;    /* tamaño del texto */
+  border-radius: 8px;   /* bordes redondeados (opcional) */
+}
+.tab-btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #c1b9da;
+  color: #333;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.tab-btn.active, .tab-btn:hover {
+  background-color: #4736dc;
+  color: rgb(255, 255, 255);
+}
+
+.project-tab {
+  display: none; /* Ocultar todos por defecto */
+}
+
+
+.project-tab.active {
+  display: block;
+}
