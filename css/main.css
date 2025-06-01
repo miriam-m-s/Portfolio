@@ -43,11 +43,15 @@
   margin-bottom: 2rem;
   gap: 1rem;
 }
-
+.tab-btn {
+  padding: 12px 24px;   /* tamaño interno más grande */
+  font-size: 3ch;    /* tamaño del texto */
+  border-radius: 8px;   /* bordes redondeados (opcional) */
+}
 .tab-btn {
   padding: 10px 20px;
   border: none;
-  background-color: #eee;
+  background-color: #c1b9da;
   color: #333;
   cursor: pointer;
   border-radius: 5px;
@@ -56,7 +60,7 @@
 
 .tab-btn.active, .tab-btn:hover {
   background-color: #4736dc;
-  color: rgb(192, 176, 248);
+  color: rgb(255, 255, 255);
 }
 
 .project-tab {
