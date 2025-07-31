@@ -100,7 +100,10 @@ Have fun creating your portfolio on this template!!! -->
     </script>
     <!-- End of Google Analytics -->
   </head>
+
+
   <body>
+    
     <!-- Hero Section -->
     <div id="hero">
       <section class="container">
@@ -154,321 +157,18 @@ Have fun creating your portfolio on this template!!! -->
     <!--Projects Section-->
 <section id="projects">
       <div class="tab-buttons">
-        <button class="tab-btn active" onclick="filterProjects('software', this)">Software Engineering</button>
-        <button class="tab-btn" onclick="filterProjects('techart', this)">Tech Art</button>
+        
+        <button class="tab-btn active" onclick="filterProjects('techart', this)">Tech Art</button>
+        <button class="tab-btn" onclick="filterProjects('vfx', this)">VFX</button>
+        <button class="tab-btn " onclick="filterProjects('tools', this)">Tools</button>
         <button class="tab-btn" onclick="filterProjects('games', this)">Games</button>
-
+        <button class="tab-btn " onclick="filterProjects('software', this)">Software Engineering</button>
       </div>
-  <div class="project-tab software">
-      <div class="container">
-          <div class="project-wrapper">
-            <h2 class="section-title dark-blue-text">Projects</h2>
 
-            <!-- Each .row is a project -->
-            <article class="row">
-              <div class="project-wrapper__text">
-                <h3 class="project-wrapper__text-title">Blender to Unity exporter</h3>
-                <p class="project-wrapper__text-info">
-                  This addon allows for exporting  <strong>Blender materials</strong> and objects to  <strong>Unity’s Universal Render Pipeline (URP)</strong>.<br><br>
-                  🛠️ Made using HLSL and Python.<br><br>
-                  🎨 It enables the export of procedural materials so that their appearance
-                    in Blender matches that in Unity.<br><br>
-                    📁 The addon generates a .shader 
-                    file, a .material file, an .fbx model, and a prefab 
-                    with the materials correctly applied.<br><br>
-                    🧠 Compatible with a large number of Blender nodes and easily extensible.<br><br>
-                </p>
-                <div class="project-wrapper__text-btns">
-                  <a
-                    href="https://github.com/TFG-MEP/Blender_to_Unity_Material_Export_Plug-in"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="cta-btn cta-btn--hero cta-btn--projects"
-                    >Source Code</a
-                  >
-                
-                </div>
-              </div>
-
-              <div class="project-wrapper__image">
-                <a href="./assets/addonUsage.gif" target="_blank" rel="noopener noreferrer">
-                  <div class="thumbnail rounded">
-                    <img
-                      src="./assets/addonUsage.gif"
-                      class="img-fluid"
-                      alt="Project Image"
-                      width="1366"
-                      height="767"
-                    />
-                  </div>
-                </a>
-              </div>
-            </article>
-            <!-- /END Project -->
-
-            <!-- Each .row is a project -->
-            <article class="row">
-              <div class="project-wrapper__text">
-                <h3 class="project-wrapper__text-title">CrazyU / Separity</h3>
-                <p class="project-wrapper__text-info">
-                  <strong>Separity</strong> is a game engine created for the Project 3 course at Complutense University.<br><br>
-                  🛠️ Made in C++.<br><br>
-                  📚 The engine's development incorporates the following libraries: <strong>Physics</strong> (Bullet 3D), <strong>User Interface</strong> (OgreOverlay), <strong>Graphics</strong> (Ogre), <strong>Input</strong> (Ogre::SDL), <strong>Scripting and Scenes</strong> (Luabridge), and <strong>Audio</strong> (FMOD).<br><br>
-                  🎮 In addition to the engine, a game called <em><strong>Crazy U</strong></em> was developed using it.
-                </p>
-                
-                
-                <div class="project-wrapper__text-btns">
-                  <a
-                    href="https://github.com/XupappInc/Separity"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="cta-btn cta-btn--hero cta-btn--projects"
-                    >Source Code</a
-                  >
-                  
-                </div>
-              </div>
-
-              <div class="project-wrapper__image">
-                <a href="./assets/Crazyu.png" target="_blank" rel="noopener noreferrer">
-                  <div class="thumbnail rounded">
-                    <img
-                      src="./assets/Crazyu.png"
-                      class="img-fluid"
-                      alt="Project Image"
-                      width="1366"
-                      height="767"
-                    />
-                  </div>
-                </a>
-              </div>
-            </article>
-
-            <article class="row">
-              <div class="project-wrapper__text">
-                <h3 class="project-wrapper__text-title">Eye Tracker</h3>
-                <p class="project-wrapper__text-info">
-                  This project, developed in <strong>Python</strong> captures the user's 
-                  gaze in real time 
-                  and maps the observed positions onto screen coordinates. 
-                  Additionally, it records the user's screen and synchronizes 
-                  gaze data with video footage, generating a 
-                  video that overlays visual indicators on the observed areas.
-                </p>
-                <div class="project-wrapper__text-btns">
-                  <a
-                    href="https://github.com/miriam-m-s/G3_Usabilidad_Pfinal"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="cta-btn cta-btn--hero cta-btn--projects"
-                    >Source Code</a
-                  >
-                  <!-- <a href="https://github.com/miriam-m-s/G3_Usabilidad_Pfinal" target="_blank" class="cta-btn text-color-main"
-                    >Source Code</a
-                  > -->
-                </div>
-              </div>
-
-              <div class="project-wrapper__image">
-                <a href="./assets/DemoEyeTracker.mp4" target="_blank" rel="noopener noreferrer">
-                  <div class="thumbnail rounded">
-                    <video
-                    src="./assets/DemoEyeTracker.mp4"
-                    class="img-fluid"
-                    width="1366"
-                    height="767"
-                    controls
-                    alt="Project Video"
-                  ></video>
-                  </div>
-                </a>
-              </div>
-            </article>
-            
-            <!-- /END Project -->
-            <article class="row">
-              <div class="project-wrapper__text">
-                <h3 class="project-wrapper__text-title">Master-Mind</h3>
-                <p class="project-wrapper__text-info">
-                  A mobile adaptation of the classic 'Mastermind' game, developed for Android.<br><br>
-                
-                  🛠️ Created using Java in Android Studio.<br><br>
-                
-                  📱 Key mobile features include notifications, ads, sharing options, and more.<br><br>
-                
-                  🧠 The code is well-organized, with a clear separation between the game logic and the engine.<br><br>
-                
-                  🪙 Includes a customizable reward and monetization system.
-                </p>
-                
-                <div class="project-wrapper__text-btns">
-                  <a
-                    href="https://github.com/Lauu029/Moviles"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="cta-btn cta-btn--hero cta-btn--projects"
-                    >Source Code</a
-                  >
-                
-                </div>
-              </div>
-
-              <div class="project-wrapper__image">
-                <a href="./assets/moviles.gif" target="_blank" rel="noopener noreferrer">
-                  <div class="thumbnail rounded">
-                    <img
-                      src="./assets/moviles.gif"
-                      class="img-fluid"
-                      alt="Project Image"
-                      width="1366"
-                      height="767"
-                    />
-                  </div>
-                </a>
-              </div>
-              
-            </article>
-          </div>
-        </div>
       
     <!-- tu artículo del exportador de Blender a Unity -->
   </div>
-
-<div class="project-tab games">
-  
-        
-         
-   <div class="container">
-        <div class="project-wrapper">
-          <h2 class="section-title dark-blue-text">Projects</h2>
-
-            <article class="row">
-                  <div class="project-wrapper__text">
-                    <h3 class="project-wrapper__text-title">Lilith 🪽​​</h3>
-                    <p class="project-wrapper__text-info">
-  Lilith is a game developed as part of a master's program at the Complutense University of Madrid and Voxel School.<br><br>
-  🧪 I was in charge of all the <strong>technical art</strong> aspects.<br><br>
-  💡 I worked on the <strong>scene lighting</strong> to create the right atmosphere.<br><br>
-  ✨ I also designed and implemented all the <strong>visual effects (VFX)</strong> in the game.<br><br>
-</p>
-
-                     <div class="project-wrapper__text-btns">
-                      <a
-                        href="https://store.steampowered.com/app/3587510/Lilith_Rise_of_the_Fallen/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="cta-btn cta-btn--hero cta-btn--projects"
-                        >See on Steam</a
-                      >
-                      
-                    </div>
-                  </div>
-      
-                  <div class="project-wrapper__image">
-                    <a href="./assets/LILITH.mp4" target="_blank" rel="noopener noreferrer">
-                      <div class="thumbnail rounded">
-                        <video
-                        src="./assets/LILITH.mp4"
-                        class="img-fluid"
-                        width="1366"
-                        height="767"
-                        controls
-                        alt="Project Video"
-                        
-                      ></video>
-                      </div>
-                    </a>
-                  </div>
-                </article>
-
-        
-          <!-- /END Project -->
-                <!-- Each .row is a project -->
-                <article class="row">
-                  <div class="project-wrapper__text">
-                    <h3 class="project-wrapper__text-title">Ping PongPa 🫧</h3>
-                    <p class="project-wrapper__text-info">
-                      A game created in Unity during the Global GameJam 2025. 
-                      Cooperate with a teammate, parrying the spikes doing ping-pong as they approach the bubble!      
-                     </p>
-                     <div class="project-wrapper__text-btns">
-                      <a
-                        href="https://juegosasados.itch.io/pingpompa"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="cta-btn cta-btn--hero cta-btn--projects"
-                        >See on Itchio</a
-                      >
-                      
-                    </div>
-                  </div>
-      
-                  <div class="project-wrapper__image">
-                    <a href="./assets/PING-POMPA .mp4" target="_blank" rel="noopener noreferrer">
-                      <div class="thumbnail rounded">
-                        <video
-                        src="./assets/PING-POMPA .mp4"
-                        class="img-fluid"
-                        width="1366"
-                        height="767"
-                        controls
-                        alt="Project Video"
-                        
-                      ></video>
-                      </div>
-                    </a>
-                  </div>
-                </article>
-                      <!-- /END Project -->       
-           
-      
-                <!-- Each .row is a project -->
-          <article class="row">
-            <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">I am afraid of Lemons 🍋</h3>
-              <p class="project-wrapper__text-info">
-                A game created in Unity during the Global GameJam 2024. 
-                In this game, you play as the owner of a store, 
-                where each day reveals a new part of an unfolding story.
-                 As the days pass, you must uncover clues and piece together
-                  the truth hidden within the narrative, all while managing 
-                  the daily operations of your store.         
-               </p>
-               <div class="project-wrapper__text-btns">
-                <a
-                  href="https://juegosasados.itch.io/limones"  
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="cta-btn cta-btn--hero cta-btn--projects"
-                  >See on Itchio</a
-                >
-                
-              </div>
-            </div>
-
-            <div class="project-wrapper__image">
-              <a href="./assets/lemon.mp4" target="_blank" rel="noopener noreferrer">
-                <div class="thumbnail rounded">
-                  <video
-                  src="./assets/lemon.mp4"
-                  class="img-fluid"
-                  width="1366"
-                  height="767"
-                  controls
-                  alt="Project Video"
-                  poster="./assets/PORTADA.png"
-                ></video>
-                </div>
-              </a>
-            </div>
-          </article>
-           
-        </div>
-      </div>
-</div>
-
-<div class="project-tab techart">
+  <div class="project-tab techart">
   <div class="container">
         <div class="project-wrapper">
           <h2 class="section-title dark-blue-text">Projects</h2>
@@ -633,10 +333,287 @@ Have fun creating your portfolio on this template!!! -->
               </a>
             </div>
           </article>
+         
+         
+        </div>
+      </div>
+</div>
+  <div class="project-tab tools">
+      <div class="container">
+          <div class="project-wrapper">
+            <h2 class="section-title dark-blue-text">Projects</h2>
+   <!-- Each .row is a project -->
+            <article class="row">
+              <div class="project-wrapper__text">
+                <h3 class="project-wrapper__text-title">Baking Tool</h3>
+                <p class="project-wrapper__text-info">
+                This tool is designed to optimize <strong>asset management</strong> and streamline the <strong>environment art workflow</strong>.<br><br>
+🛠️ Built in C++,Python and Blueprint <br><br>
+📦 It automatically merges all objects located within the <code>Props/Atlas/SceneFolderName</code> folder in the Outliner and generates a single <strong>merged static mesh</strong>.<br><br>
+🎨 Creates a <strong>texture atlas</strong> and generates the corresponding <strong>material instances</strong> for the merged mesh.<br><br>
+📁 The resulting assets are automatically  in the Content Browser.<br><br>
+⚡ This tool significantly improves optimization, enhances project performance, and reduces manual workload for  artists.<br><br>
+
+
+                </p>
+                <div class="project-wrapper__text-btns">
+                  <a
+                    href="https://github.com/miriam-m-s/BakingMaterial"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cta-btn cta-btn--hero cta-btn--projects"
+                    >Source Code</a
+                  >
+                
+                </div>
+              </div>
+
+                  <div class="project-wrapper__image">
+                <a href="./assets/BakingTool.mp4" target="_blank" rel="noopener noreferrer">
+                  <div class="thumbnail rounded">
+                    <video
+                    src="./assets/BakingTool.mp4"
+                    class="img-fluid"
+                    width="1366"
+                    height="767"
+                    controls
+                    alt="Project Video"
+                  ></video>
+                  </div>
+                </a>
+              </div>
+            </article>
+            <!-- Each .row is a project -->
+            <article class="row">
+              <div class="project-wrapper__text">
+                <h3 class="project-wrapper__text-title">Blender to Unity exporter</h3>
+                <p class="project-wrapper__text-info">
+                  This addon allows for exporting  <strong>Blender materials</strong> and objects to  <strong>Unity’s Universal Render Pipeline (URP)</strong>.<br><br>
+                  🛠️ Made using HLSL and Python.<br><br>
+                  🎨 It enables the export of procedural materials so that their appearance
+                    in Blender matches that in Unity.<br><br>
+                    📁 The addon generates a .shader 
+                    file, a .material file, an .fbx model, and a prefab 
+                    with the materials correctly applied.<br><br>
+                    🧠 Compatible with a large number of Blender nodes and easily extensible.<br><br>
+                </p>
+                <div class="project-wrapper__text-btns">
+                  <a
+                    href="https://github.com/TFG-MEP/Blender_to_Unity_Material_Export_Plug-in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cta-btn cta-btn--hero cta-btn--projects"
+                    >Source Code</a
+                  >
+                
+                </div>
+              </div>
+
+              <div class="project-wrapper__image">
+                <a href="./assets/addonUsage.gif" target="_blank" rel="noopener noreferrer">
+                  <div class="thumbnail rounded">
+                    <img
+                      src="./assets/addonUsage.gif"
+                      class="img-fluid"
+                      alt="Project Image"
+                      width="1366"
+                      height="767"
+                    />
+                  </div>
+                </a>
+              </div>
+            </article>
+            <!-- /END Project -->
+
+            <!-- Each .row is a project -->
+      
+
+            <article class="row">
+              <div class="project-wrapper__text">
+                <h3 class="project-wrapper__text-title">Eye Tracker</h3>
+                <p class="project-wrapper__text-info">
+                  This project, developed in <strong>Python</strong> captures the user's 
+                  gaze in real time 
+                  and maps the observed positions onto screen coordinates. 
+                  Additionally, it records the user's screen and synchronizes 
+                  gaze data with video footage, generating a 
+                  video that overlays visual indicators on the observed areas.
+                </p>
+                <div class="project-wrapper__text-btns">
+                  <a
+                    href="https://github.com/miriam-m-s/G3_Usabilidad_Pfinal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cta-btn cta-btn--hero cta-btn--projects"
+                    >Source Code</a
+                  >
+                  <!-- <a href="https://github.com/miriam-m-s/G3_Usabilidad_Pfinal" target="_blank" class="cta-btn text-color-main"
+                    >Source Code</a
+                  > -->
+                </div>
+              </div>
+
+              <div class="project-wrapper__image">
+                <a href="./assets/DemoEyeTracker.mp4" target="_blank" rel="noopener noreferrer">
+                  <div class="thumbnail rounded">
+                    <video
+                    src="./assets/DemoEyeTracker.mp4"
+                    class="img-fluid"
+                    width="1366"
+                    height="767"
+                    controls
+                    alt="Project Video"
+                  ></video>
+                  </div>
+                </a>
+              </div>
+            </article>
+    
+  </div>
+    </div>
+      </div>
+
+<div class="project-tab games">
+  
+        
+         
+   <div class="container">
+        <div class="project-wrapper">
+          <h2 class="section-title dark-blue-text">Projects</h2>
+
+            <article class="row">
+                  <div class="project-wrapper__text">
+                    <h3 class="project-wrapper__text-title">Lilith 🪽​​</h3>
+                    <p class="project-wrapper__text-info">
+  Lilith is a game developed as part of a master's program at the Complutense University of Madrid and Voxel School.<br><br>
+  🧪 I was in charge of all the <strong>technical art</strong> aspects.<br><br>
+  💡 I worked on the <strong>scene lighting</strong> to create the right atmosphere.<br><br>
+  ✨ I also designed and implemented all the <strong>visual effects (VFX)</strong> in the game.<br><br>
+</p>
+
+                     <div class="project-wrapper__text-btns">
+                      <a
+                        href="https://store.steampowered.com/app/3587510/Lilith_Rise_of_the_Fallen/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="cta-btn cta-btn--hero cta-btn--projects"
+                        >See on Steam</a
+                      >
+                      
+                    </div>
+                  </div>
+      
+                  <div class="project-wrapper__image">
+                    <a href="./assets/LILITH.mp4" target="_blank" rel="noopener noreferrer">
+                      <div class="thumbnail rounded">
+                        <video
+                        src="./assets/LILITH.mp4"
+                        class="img-fluid"
+                        width="1366"
+                        height="767"
+                        controls
+                        alt="Project Video"
+                        
+                      ></video>
+                      </div>
+                    </a>
+                  </div>
+                </article>
+
+        
+          <!-- /END Project -->
+                <!-- Each .row is a project -->
+                <article class="row">
+                  <div class="project-wrapper__text">
+                    <h3 class="project-wrapper__text-title">Ping PongPa 🫧</h3>
+                    <p class="project-wrapper__text-info">
+                      A game created in Unity during the Global GameJam 2025. 
+                      Cooperate with a teammate, parrying the spikes doing ping-pong as they approach the bubble!      
+                     </p>
+                     <div class="project-wrapper__text-btns">
+                      <a
+                        href="https://juegosasados.itch.io/pingpompa"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="cta-btn cta-btn--hero cta-btn--projects"
+                        >See on Itchio</a
+                      >
+                      
+                    </div>
+                  </div>
+      
+                  <div class="project-wrapper__image">
+                    <a href="./assets/PING-POMPA .mp4" target="_blank" rel="noopener noreferrer">
+                      <div class="thumbnail rounded">
+                        <video
+                        src="./assets/PING-POMPA .mp4"
+                        class="img-fluid"
+                        width="1366"
+                        height="767"
+                        controls
+                        alt="Project Video"
+                        
+                      ></video>
+                      </div>
+                    </a>
+                  </div>
+                </article>
+                      <!-- /END Project -->       
+           
+      
+                <!-- Each .row is a project -->
+          <article class="row">
+            <div class="project-wrapper__text">
+              <h3 class="project-wrapper__text-title">I am afraid of Lemons 🍋</h3>
+              <p class="project-wrapper__text-info">
+                A game created in Unity during the Global GameJam 2024. 
+                In this game, you play as the owner of a store, 
+                where each day reveals a new part of an unfolding story.
+                 As the days pass, you must uncover clues and piece together
+                  the truth hidden within the narrative, all while managing 
+                  the daily operations of your store.         
+               </p>
+               <div class="project-wrapper__text-btns">
+                <a
+                  href="https://juegosasados.itch.io/limones"  
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="cta-btn cta-btn--hero cta-btn--projects"
+                  >See on Itchio</a
+                >
+                
+              </div>
+            </div>
+
+            <div class="project-wrapper__image">
+              <a href="./assets/lemon.mp4" target="_blank" rel="noopener noreferrer">
+                <div class="thumbnail rounded">
+                  <video
+                  src="./assets/lemon.mp4"
+                  class="img-fluid"
+                  width="1366"
+                  height="767"
+                  controls
+                  alt="Project Video"
+                  poster="./assets/PORTADA.png"
+                ></video>
+                </div>
+              </a>
+            </div>
+          </article>
+           
+        </div>
+      </div>
+</div>
+<div class="project-tab vfx">
+  <div class="container">
+        <div class="project-wrapper">
+          <h2 class="section-title dark-blue-text">Projects</h2>      
             <article class="row">
                   <div class="project-wrapper__text">
                     <h3 class="project-wrapper__text-title">Autumn Waterfall 🍂</h3>
                     <p class="project-wrapper__text-info">
+                        Vfx made in <strong>Niagara</strong> Unreal Engine.<br></br>
                       💧 Created a <strong>stylized waterfall shader</strong> and a <strong>water shader</strong> that uses <strong>distance fields</strong> to simulate <strong>waves</strong> on meshes intersecting with the <strong>water surface</strong>.<br><br>
 
                      
@@ -669,10 +646,144 @@ Have fun creating your portfolio on this template!!! -->
               </a>
             </div>
                 </article>
+              <article class="row">
+                  <div class="project-wrapper__text">
+                    <h3 class="project-wrapper__text-title">Houdini Sea</h3>
+                    <p class="project-wrapper__text-info">
+                      This project integrates a <strong>Houdini FLIP water simulation</strong> with an <strong>ocean surface system</strong> including foam (whitewater) and a detailed fluid mesh.<br><br>
+🌊 Simulates a realistic crashing wave.<br><br>
+🎥 Built using Houdini’s FLIP solver, whitewater system.<br><br>
+🧪 Focused on achieving believable interaction between fluid dynamics and ocean shaders.<br><br>
+
+                     
+                     </p>
+                     <div class="project-wrapper__text-btns">
+                      <a
+                        href="https://www.artstation.com/artwork/L4gkn5"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="cta-btn cta-btn--hero cta-btn--projects"
+                        >See on ArtStation</a
+                      >
+                      
+                    </div>
+                  </div>
+      
+                   <div class="project-wrapper__image">
+              <a href="./assets/waterfall.mp4" target="_blank" rel="noopener noreferrer">
+                <div class="thumbnail rounded">
+                  <video
+                  src="./assets/SeaFinal.mp4"
+                  class="img-fluid"
+                  width="1366"
+                  height="767"
+                  poster="./assets/sea.png"
+                  controls
+                  alt="Project Video"
+          
+                ></video>
+                </div>
+              </a>
+            </div>
+                </article>
          
-        </div>http://127.0.0.1:3000/assets/waterfall.mp4
+        </div>
       </div>
 </div>
+
+  <div class="project-tab software">
+      <div class="container">
+          <div class="project-wrapper">
+            <h2 class="section-title dark-blue-text">Projects</h2>
+
+    
+
+            <!-- Each .row is a project -->
+            <article class="row">
+              <div class="project-wrapper__text">
+                <h3 class="project-wrapper__text-title">CrazyU / Separity</h3>
+                <p class="project-wrapper__text-info">
+                  <strong>Separity</strong> is a game engine created for the Project 3 course at Complutense University.<br><br>
+                  🛠️ Made in C++.<br><br>
+                  📚 The engine's development incorporates the following libraries: <strong>Physics</strong> (Bullet 3D), <strong>User Interface</strong> (OgreOverlay), <strong>Graphics</strong> (Ogre), <strong>Input</strong> (Ogre::SDL), <strong>Scripting and Scenes</strong> (Luabridge), and <strong>Audio</strong> (FMOD).<br><br>
+                  🎮 In addition to the engine, a game called <em><strong>Crazy U</strong></em> was developed using it.
+                </p>
+                
+                
+                <div class="project-wrapper__text-btns">
+                  <a
+                    href="https://github.com/XupappInc/Separity"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cta-btn cta-btn--hero cta-btn--projects"
+                    >Source Code</a
+                  >
+                  
+                </div>
+              </div>
+
+              <div class="project-wrapper__image">
+                <a href="./assets/Crazyu.png" target="_blank" rel="noopener noreferrer">
+                  <div class="thumbnail rounded">
+                    <img
+                      src="./assets/Crazyu.png"
+                      class="img-fluid"
+                      alt="Project Image"
+                      width="1366"
+                      height="767"
+                    />
+                  </div>
+                </a>
+              </div>
+            </article>
+
+         
+            
+            <!-- /END Project -->
+            <article class="row">
+              <div class="project-wrapper__text">
+                <h3 class="project-wrapper__text-title">Master-Mind</h3>
+                <p class="project-wrapper__text-info">
+                  A mobile adaptation of the classic 'Mastermind' game, developed for Android.<br><br>
+                
+                  🛠️ Created using Java in Android Studio.<br><br>
+                
+                  📱 Key mobile features include notifications, ads, sharing options, and more.<br><br>
+                
+                  🧠 The code is well-organized, with a clear separation between the game logic and the engine.<br><br>
+                
+                  🪙 Includes a customizable reward and monetization system.
+                </p>
+                
+                <div class="project-wrapper__text-btns">
+                  <a
+                    href="https://github.com/Lauu029/Moviles"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cta-btn cta-btn--hero cta-btn--projects"
+                    >Source Code</a
+                  >
+                
+                </div>
+              </div>
+
+              <div class="project-wrapper__image">
+                <a href="./assets/moviles.gif" target="_blank" rel="noopener noreferrer">
+                  <div class="thumbnail rounded">
+                    <img
+                      src="./assets/moviles.gif"
+                      class="img-fluid"
+                      alt="Project Image"
+                      width="1366"
+                      height="767"
+                    />
+                  </div>
+                </a>
+              </div>
+              
+            </article>
+          </div>
+        </div>
 </section>   
     <!-- End Projects Section -->
 
@@ -770,7 +881,7 @@ Have fun creating your portfolio on this template!!! -->
   }
 
   window.addEventListener('DOMContentLoaded', () => {
-    filterProjects('software', document.querySelector('.tab-btn.active'));
+    filterProjects('techart', document.querySelector('.tab-btn.active'));
   });
 </script>
 
