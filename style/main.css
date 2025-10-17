@@ -716,3 +716,29 @@ section .row span {
 .project-tab.active {
   display: block;
 }
+/* Navbar fija siempre arriba */
+.navbar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(255,255,255,0.95) !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+  transition: all 0.3s ease;
+  padding: 20px 0 !important;
+}
+
+/* Efecto al hacer scroll */
+.navbar.scrolled {
+  background-color: #4736dc !important;
+  padding: 10px 0 !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+}
+
+/* Ajuste para que el contenido no quede oculto */
+body {
+  padding-top: 80px; /* Ajusta según la altura de tu navbar */
+}
+
+

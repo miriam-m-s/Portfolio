@@ -101,9 +101,25 @@ Have fun creating your portfolio on this template!!! -->
     <!-- End of Google Analytics -->
   </head>
 
+<script>
+  window.addEventListener("scroll", () => {
+    const nav = document.querySelector(".navbar");
+    if (window.scrollY > 50) {
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
+  });
+</script>
+
 
   <body>
-    
+   <header class="navbar">
+    <nav class="nav-container">
+      <a href="#hero">Inicio</a>
+      <a href="#about">Sobre mí</a>
+    </nav>
+  </header>
     <!-- Hero Section -->
     <div id="hero">
       <section class="container">
