@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Miriam | Technical Art</title>
+
+  <link rel="icon" type="image/png" href="../assets/devfolio-logo.png" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="./project.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+ 
+  </style>
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav id="navbar">
+    <a class="logo" href="../index.html">Miriam | Technical Art</a>
+    <ul>
+      <li><a href="./tech_art.html">Tech Art</a></li>
+      <li><a href="../tools/tools.html">Tools</a></li>
+      <li><a href="../vfx/vfx.html">VFX</a></li>
+      <li><a href="../games/games.html">Games</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-grid">
+      <div>
+        <h1 class="hero-title">Runtime Terrain Destruction</h1>
+        <p class="hero-sub">
+          Procedural terrain generation using the Marching Cubes algorithm implemented in C++.
+          Chunked terrain, real-time editing, LOD-friendly.
+        </p>
+
+        <div class="hero-cta">
+          <a href="https://github.com/miriam-m-s/MarchingCubes" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--hero cta-btn--projects">See on GitHub</a>
+        </div> 
+       
+      </div>
+
+      <div style="display:flex;align-items:center;justify-content:center">
+        <div style="background:linear-gradient(135deg,#fff 0%, #fbfbff 100%);padding:1.4rem;border-radius:12px;border:1px solid rgba(0,0,0,0.04);width:100%;max-width:340px;box-shadow:0 10px 30px rgba(35,36,55,0.05)">
+          <h3 style="margin-bottom:.6rem">Quick Details</h3>
+          <div class="meta">
+            <span class="pill">C++</span>
+            <span class="pill">Procedural</span>
+            <span class="pill">Unreal</span>
+          </div>
+          <p style="color:#50607a;font-size:1.3rem;margin-top:.6rem">
+            Dynamic chunks, runtime editing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main id="project" class="content">
+    <div class="project-panel">
+      <!-- VIDEO PRINCIPAL -->
+      <div>
+        <div class="media-card">
+          <video id="mainVideo" src="../assets/MarchingCubes.mp4" poster="../assets/marcheo.png" controls playsinline></video>
+        </div>
+
+        <!-- GALERÍA -->
+        <h3 class="section-title">Gallery</h3>
+        <div class="gallery" id="gallery">
+          <div class="thumb" data-type="video" data-src="../assets/MarchingCubes.mp4">
+            <video src="../assets/MarchingCubes.mp4" muted loop playsinline></video>
+          </div>
+          <div class="thumb" data-type="video" data-src="../assets/MarchingFinal.mp4">
+            <video src="../assets/MarchingFinal.mp4" muted loop playsinline></video>
+          </div>
+         
+        </div>
+      </div>
+
+      <!-- INFO -->
+      <aside class="info-card" aria-labelledby="project-title">
+        <h2 id="project-title">Cube Marching — Technical Overview</h2>
+        <p style="color:#425069;margin-top:.6rem">
+         I made this terrarin usin the Marching Cubes algorithm, which enabled real-time terrain destruction. I also
+developed the click-based interaction system (clicker), which triggered the visual effects (VFX)
+on spell impact. Additionally, I created the terrain shader, which dynamically
+responded to changes such as material transitions and surface deformation with RVT and vertexColor.
+        </p>
+
+        <h4 style="margin-top:1.4rem">Features</h4>
+        <ul class="feat">
+          <li>Procedural generation using Perlin noise .</li>
+          <li>Dynamic destruction of terrain and vegetation.</li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <a href="#hero" class="back-to-top" aria-label="go back to top">
+        <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+      </a>
+      <div class="social-links">
+        <a href="https://miriam_m_s.artstation.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-artstation"></i></a>
+        <a href="https://www.linkedin.com/in/miriam-martin-sanchez-947b3b189/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/miriam-m-s" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+      </div>
+      
+     
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    const mainVideo = document.getElementById('mainVideo');
+    const thumbs = document.querySelectorAll('.thumb');
+
+    thumbs.forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        const type = thumb.dataset.type;
+        const src = thumb.dataset.src;
+
+        if(type === 'video') {
+          mainVideo.src = src;
+          mainVideo.poster = '';
+          mainVideo.load();
+          mainVideo.play();
+        } else if(type === 'img') {
+          mainVideo.src = '';
+          mainVideo.poster = src;
+        }
+      });
+    });
+  </script>
+</body>
+</html>

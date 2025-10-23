@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Miriam | VFX</title>
+  <link rel="icon" type="image/png" href="../assets/devfolio-logo.png" />
+
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    nav a.logo {
+      font-weight: 700;
+      font-size: 2.2rem;
+      color: #4249a8;
+    }
+
+    /* Grid de proyectos */
+    .vfx-projects {
+      display: grid;
+      gap: 3rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      max-width: 1400px;
+      margin: 5rem auto;
+      padding: 0 1rem;
+    }
+
+    /* Máximo 3 columnas en pantallas grandes */
+    @media (min-width: 1200px) {
+      .vfx-projects {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .project-card {
+      position: relative;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-card video,
+    .project-card img {
+      border-radius: 20px;
+      width: 100%;
+      max-width: 700px;
+      height: auto;
+      display: block;
+    }
+
+    .project-info h3 {
+      margin-top: 1.2rem;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .project-info p {
+      margin-top: 0.7rem;
+      font-size: 1.5rem;
+      max-width: 700px;
+    }
+
+    .cta-btn--projects {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+    }
+
+    #vfx {
+      background: linear-gradient(135deg, #6a85b6, #bac8e0);
+      padding: 5rem 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <a class="logo" href="../index.html">Miriam | VFX</a>
+    <ul>
+      <li><a href="../tech_art/tech_art.html">Tech Art</a></li>
+      <li><a href="../tools/tools.html">Tools</a></li>
+      <li><a href="vfx.html">VFX</a></li>
+      <li><a href="../games/games.html">Games</a></li>
+    </ul>
+  </nav>
+
+  <!-- VFX Section -->
+  <section id="vfx">
+    <div class="container">
+      <div class="vfx-projects">
+
+        <!-- Autumn Waterfall -->
+        <div class="project-card">
+          <video src="../assets/waterfall.mp4" controls poster="../assets/waterff.png"></video>
+          <div class="project-info">
+            <h3>Autumn Waterfall 🍂</h3>
+            <p>
+              VFX created in <strong>Niagara (Unreal Engine)</strong>.  
+              Features a <strong>stylized waterfall shader</strong> and <strong>interactive water shader</strong> that uses <strong>distance fields</strong> to simulate waves where meshes intersect the water surface.
+            </p>
+            <div class="project-wrapper__text-btns">
+              <a href="https://www.artstation.com/artwork/L4gkn5" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--hero cta-btn--projects">
+                See on ArtStation
+              </a>
+            </div> 
+          </div>
+        </div>
+
+        <!-- Houdini Sea -->
+        <div class="project-card">
+          <video src="../assets/SeaFinal.mp4" controls poster="../assets/sea.png"></video>
+          <div class="project-info">
+            <h3>Houdini Sea 🌊</h3>
+            <p>
+              Integration of a <strong>Houdini FLIP water simulation</strong> with an <strong>ocean surface system</strong> including foam and detailed fluid mesh.  
+              Focused on realistic interaction between fluid dynamics and custom ocean shaders.
+            </p>
+            <div class="project-wrapper__text-btns">
+              <a href="https://www.artstation.com/artwork/L4mPXv" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--hero cta-btn--projects">
+                See on ArtStation
+              </a>
+            </div> 
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <a href="#vfx" class="back-to-top" aria-label="go back to top">
+        <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+      </a>
+      <div class="social-links">
+        <a href="https://miriam_m_s.artstation.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-artstation"></i></a>
+        <a href="https://www.linkedin.com/in/miriam-martin-sanchez-947b3b189/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/miriam-m-s" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+      </div>
+      <hr />
+      <p class="footer__text">
+        &copy; <span id="year"></span> - Template by
+        <a href="https://github.com/AnilSeervi" target="_blank" rel="noopener noreferrer">Anil Seervi</a>. <br />Made with &hearts;
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

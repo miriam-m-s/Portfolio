@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Miriam | Games</title>
+  <link rel="icon" type="image/png" href="../assets/devfolio-logo.png" />
+
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    nav a.logo {
+      font-weight: 700;
+      font-size: 2.2rem;
+      color: #4249a8;
+    }
+
+    /* Grid de proyectos */
+    .games-projects {
+      display: grid;
+      gap: 3rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      max-width: 1400px;
+      margin: 5rem auto;
+      padding: 0 1rem;
+    }
+
+    /* Máximo 3 columnas */
+    @media (min-width: 1200px) {
+      .games-projects {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .project-card {
+      position: relative;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-card video,
+    .project-card img {
+      border-radius: 20px;
+      width: 100%;
+      max-width: 700px;
+      height: auto;
+      display: block;
+    }
+
+    .project-info h3 {
+      margin-top: 1.2rem;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .project-info p {
+      margin-top: 0.7rem;
+      font-size: 1.5rem;
+      max-width: 700px;
+    }
+
+    .cta-btn--projects {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+    }
+
+    #games {
+      background: linear-gradient(135deg, #9b9ede, #c9e1f5);
+      padding: 5rem 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <a class="logo" href="../index.html">Miriam | Games</a>
+    <ul>
+      <li><a href="../tech_art/tech_art.html">Tech Art</a></li>
+      <li><a href="../tools/tools.html">Tools</a></li>
+      <li><a href="../vfx/vfx.html">VFX</a></li>
+      <li><a href="games.html">Games</a></li>
+    </ul>
+  </nav>
+
+  <!-- Games Section -->
+  <section id="games">
+    <div class="container">
+      <div class="games-projects">
+
+        <!-- Lilith -->
+        <div class="project-card">
+          <video src="../assets/LILITH.mp4" controls poster="../assets/LILO.jpg"></video>
+          <div class="project-info">
+            <h3>Lilith 🪽​​</h3>
+            <p>
+              <strong>Master’s final project</strong> developed at UCM and Voxel School.  
+              I handled all <strong>technical art</strong> tasks, including <strong>lighting</strong> setup and <strong>VFX design</strong> to create an immersive dark-fantasy atmosphere.
+            </p>
+            <div class="project-wrapper__text-btns">
+              <a href="https://store.steampowered.com/app/3587510/Lilith_Rise_of_the_Fallen/" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--hero cta-btn--projects">
+                See on Steam
+              </a>
+            </div> 
+          </div>
+        </div>
+
+        <!-- Ping PongPa -->
+        <div class="project-card">
+          <video src="../assets/PING-POMPA .mp4" controls poster="../assets/pingpong.png"></video>
+          <div class="project-info">
+            <h3>Ping PongPa 🫧</h3>
+            <p>
+              A cooperative game created in <strong>Unity</strong> for the <strong>Global Game Jam 2025</strong>.  
+              Work together to deflect spikes and protect the bubble in this fast-paced ping-pong challenge!
+            </p>
+            <div class="project-wrapper__text-btns">
+              <a href="https://juegosasados.itch.io/pingpompa" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--hero cta-btn--projects">
+                See on Itch.io
+              </a>
+            </div> 
+          </div>
+        </div>
+
+        <!-- I am afraid of Lemons -->
+        <div class="project-card">
+          <video src="../assets/lemon.mp4" controls poster="../assets/PORTADA.png"></video>
+          <div class="project-info">
+            <h3>I am afraid of Lemons 🍋</h3>
+            <p>
+              Narrative management game created in <strong>Unity</strong> during the <strong>Global Game Jam 2024</strong>.  
+              Run your shop while uncovering a mysterious story that unfolds day by day.
+            </p>
+            <div class="project-wrapper__text-btns">
+              <a href="https://juegosasados.itch.io/limones" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--hero cta-btn--projects">
+                See on Itch.io
+              </a>
+            </div> 
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <a href="#games" class="back-to-top" aria-label="go back to top">
+        <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+      </a>
+      <div class="social-links">
+        <a href="https://miriam_m_s.artstation.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-artstation"></i></a>
+        <a href="https://www.linkedin.com/in/miriam-martin-sanchez-947b3b189/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/miriam-m-s" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+      </div>
+      <hr />
+      <p class="footer__text">
+        &copy; <span id="year"></span> - Template by
+        <a href="https://github.com/AnilSeervi" target="_blank" rel="noopener noreferrer">Anil Seervi</a>. <br />Made with &hearts;
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Miriam | Technical Art</title>
+  <link rel="icon" type="image/png" href="../assets/devfolio-logo.png" />
+
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    nav a.logo {
+      font-weight: 700;
+      font-size: 2.2rem;
+      color: #4249a8;
+    }
+
+    /* Grid de proyectos */
+    .tools-projects {
+      display: grid;
+      gap: 3rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      max-width: 1400px;
+      margin: 5rem auto;
+      padding: 0 1rem;
+    }
+
+    /* Asegura máximo de 3 columnas */
+    @media (min-width: 1200px) {
+      .tools-projects {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .project-card {
+      position: relative;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    /* Solapa "SEE MORE" solo para las tarjetas con clase has-tab */
+    .project-card.has-tab::before {
+      content: "SEE MORE";
+      position: absolute;
+      top: 0;
+      right: -100px;
+      background: linear-gradient(135deg, #36d1dc, #5b86e5);
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+      letter-spacing: 0.5px;
+      padding: 0.6rem 1.4rem;
+      border-bottom-left-radius: 10px;
+      transition: all 0.4s ease;
+      opacity: 0;
+    }
+
+    /* Efecto hover general */
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Mostrar solapa solo en las tarjetas con has-tab */
+    .project-card.has-tab:hover::before {
+      right: 0;
+      opacity: 1;
+      animation: pulseTab 1.2s infinite ease-in-out;
+    }
+
+    @keyframes pulseTab {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+    }
+
+    .project-card video,
+    .project-card img {
+      border-radius: 20px;
+      width: 100%;
+      max-width: 700px;
+      height: auto;
+      display: block;
+    }
+
+    .project-info h3 {
+      margin-top: 1.2rem;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .project-info p {
+      margin-top: 0.7rem;
+      font-size: 1.5rem;
+      max-width: 700px;
+    }
+
+    .cta-btn--projects {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+    }
+
+    #tools {
+      background: linear-gradient(135deg, #9291ec, #b0cfb2);
+      padding: 5rem 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <a class="logo" href="../index.html">Miriam | Tools</a>
+    <ul>
+      <li><a href="../tech_art/tech_art.html">Tech Art</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="../vfx/vfx.html">VFX</a></li>
+      <li><a href="../games/games.html">Games</a></li>
+    </ul>
+  </nav>
+
+  <section id="tools">
+    <div class="container">
+      <!-- Projects -->
+      <div class="tools-projects">
+
+        <!-- UI Card -->
+        <div class="project-card " >
+          <video src="../assets/BakingTool.mp4" controls poster="../assets/BAKEO.png"></video>
+          <div class="project-info">
+            <h3>Baking Tool</h3>
+            <p> A C++, Python, and Blueprint-based tool that automates asset merging and texture atlas creation in Unreal Engine. It optimizes environment workflows by generating merged meshes, materials.
+</p>    
+            <div class="project-wrapper__text-btns">
+              <a href="https://github.com/miriam-m-s/BakingMaterial" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--hero cta-btn--projects">
+                See on Github
+              </a>
+            </div> 
+          </div>
+        </div>
+
+        <!-- Cube Marching -->
+        <div class="project-card">
+          <img src="../assets/addonUsage.gif" ></img>
+          <div class="project-info">
+            <h3>Blender to Unity exporter</h3>
+            <p> This addon allows for exporting  <strong>Blender materials</strong> and objects to  <strong>Unity’s Universal Render Pipeline (URP)</strong>.<br><br>
+                  🛠️ Made using HLSL and Python.<br><br></p>
+            <div class="project-wrapper__text-btns">
+              <a href="https://github.com/TFG-MEP/Blender_to_Unity_Material_Export_Plug-in" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--hero cta-btn--projects">
+                See on GitHub
+              </a>
+            </div> 
+          </div>
+        </div>
+
+        <!-- Roots Growing -->
+        <div class="project-card">
+          <video src="../assets/DemoEyeTracker.mp4" controls poster="../assets/demooo.png"></video>
+          <div class="project-info">
+            <h3>Eye Tracker 👁️</h3>
+            <p>   This project, developed in <strong>Python</strong> captures the user's 
+                  gaze in real time 
+                  and maps the observed positions onto screen coordinates. </p>
+           <div class="project-wrapper__text-btns">
+              <a href="https://github.com/miriam-m-s/G3_Usabilidad_Pfinal" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--hero cta-btn--projects">
+                See on GitHub
+              </a>
+            </div> 
+          </div>
+        </div>
+
+        <!-- Cat Card -->
+        
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <a href="#hero" class="back-to-top" aria-label="go back to top">
+        <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+      </a>
+      <div class="social-links">
+        <a href="https://miriam_m_s.artstation.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-artstation"></i></a>
+        <a href="https://www.linkedin.com/in/miriam-martin-sanchez-947b3b189/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/miriam-m-s" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+      </div>
+      <hr />
+      <p class="footer__text">
+        &copy; <span id="year"></span> - Template by
+        <a href="https://github.com/AnilSeervi" target="_blank" rel="noopener noreferrer">Anil Seervi</a>. <br />Made with &hearts;
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
