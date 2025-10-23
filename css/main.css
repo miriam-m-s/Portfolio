@@ -71,8 +71,9 @@
 .project-tab.active {
   display: block;
 }
-
-
+/*==============================
+  1. NAVBAR FIJA
+==============================*/
 /*==============================
   1. NAVBAR FIJA
 ==============================*/
@@ -85,22 +86,24 @@ nav#navbar {
   background-image: linear-gradient(60deg, #ffffff, #ffffff);
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
-  padding: 1.5rem 4rem; /* añade padding lateral */
-  
-  display: flex;                  /* clave */
-  justify-content: space-between; /* separa logo e items */
-  align-items: center;            /* centra verticalmente */
+  padding: 1.5rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap; /* predeterminado */
 }
 
-/* Logo a la izquierda */
+/* Logo siempre visible */
 nav#navbar .logo {
+  display: block;
   font-size: 2rem;
   font-weight: 700;
   color: #170f61;
   text-decoration: none;
+  white-space: nowrap;
 }
 
-/* Lista de navegación a la derecha */
+/* Lista de navegación */
 nav#navbar ul {
   display: flex;
   justify-content: flex-end;
@@ -124,31 +127,60 @@ nav#navbar ul li a:hover {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
-/* Estado scrolled (si lo usas con JS) */
+/* Estado scrolled */
 nav#navbar.scrolled {
   background-color: #ff7c1e;
   padding: 1rem 4rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
+/* Menú hamburguesa oculto por defecto */
+.menu-toggle {
+  display: none;
+}
 
 /*==============================
-  6. RESPONSIVE
+  2. RESPONSIVE DESIGN
 ==============================*/
+/* Móviles hasta 900px */
 @media (max-width: 900px) {
-  .tools-wrapper {
-    grid-template-columns: 1fr;
+  /* Mostrar hamburguesa */
+  .menu-toggle {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #170f61;
   }
-  
+
+  /* Navbar flexible */
+  nav#navbar {
+    flex-wrap: wrap;
+  }
+
+  /* Ocultar links hasta activar */
   nav#navbar ul {
+    display: none;
     flex-direction: column;
-    gap: 1rem;
+    width: 100%;
+    align-items: center;
+    background: white;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(0,0,0,0.1);
   }
-  
+
+  /* Mostrar links cuando se activa */
+  nav#navbar.active ul {
+    display: flex;
+  }
+
+  /* Links en vertical */
   nav#navbar ul li a {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    color: #333;
+    padding: 0.5rem 0;
   }
 }
+
 
 @media (max-width: 500px) {
   h2 {

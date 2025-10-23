@@ -90,14 +90,21 @@
 <body>
   <!-- Navbar -->
   <nav id="navbar">
-    <a class="logo" href="../index.html">Miriam | Games</a>
-    <ul>
-      <li><a href="../tech_art/tech_art.html">Tech Art</a></li>
-      <li><a href="../tools/tools.html">Tools</a></li>
-      <li><a href="../vfx/vfx.html">VFX</a></li>
-      <li><a href="games.html">Games</a></li>
-    </ul>
-  </nav>
+  <a class="logo" href="../index.html">Miriam Martin</a>
+
+  <!-- Botón hamburguesa (solo visible en móvil) -->
+  <div class="menu-toggle" id="mobile-menu">
+    <i class="fa fa-bars"></i>
+  </div>
+
+  <ul>
+    <li><a href="../tech_art/tech_art.html">Tech Art</a></li>
+    <li><a href="../tools/tools.html">Tools</a></li>
+    <li><a href="../vfx/vfx.html">VFX</a></li>
+    <li><a href="../games/games.html" class="active">Games</a></li>
+  </ul>
+</nav>
+
 
   <!-- Games Section -->
   <section id="games">
@@ -154,7 +161,34 @@
             </div> 
           </div>
         </div>
-
+           <div class="project-card">
+          <img src="../assets/Crazyu.png" alt="CrazyU / Separity Image" />
+          <div class="project-info">
+            <h3>CrazyU / Separity</h3>
+            <p>
+              <strong>Separity</strong> is a custom <strong>game engine</strong> created for the Project 3 course at the Complutense University.  
+              Developed in <strong>C++</strong> using multiple libraries: <strong>Bullet 3D</strong> (Physics), <strong>Ogre</strong> (Graphics), <strong>FMOD</strong> (Audio), and <strong>Luabridge</strong> (Scripting).  
+              A full game, <em><strong>Crazy U</strong></em>, was developed using the engine.
+            </p>
+            <a href="https://github.com/XupappInc/Separity" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--hero cta-btn--projects">
+              Source Code
+            </a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="../assets/moviles.gif" alt="Master-Mind Project Image" />
+          <div class="project-info">
+            <h3>Master-Mind</h3>
+            <p>
+              Mobile adaptation of the classic <strong>Mastermind</strong> puzzle game, built in <strong>Java</strong> with <strong>Android Studio</strong>.  
+              Includes notifications, ads, and share features.  
+              Designed with a clear separation between engine and logic, plus a customizable reward system.
+            </p>
+            <a href="https://github.com/Lauu029/Moviles" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--hero cta-btn--projects">
+              Source Code
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -178,4 +212,12 @@
     </div>
   </footer>
 </body>
+<script>
+  const menu = document.getElementById('mobile-menu');
+  const navbar = document.getElementById('navbar');
+
+  menu.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+  });
+</script>
 </html>
