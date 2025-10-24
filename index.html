@@ -115,21 +115,19 @@ Have fun creating your portfolio on this template!!! -->
 
   <body>
    
-<nav id="navbar">
+<nav id="navbar" >
   <a class="logo" href="../index.html">Miriam Martin</a>
-
-  <!-- Botón hamburguesa (solo visible en móvil) -->
   <div class="menu-toggle" id="mobile-menu">
     <i class="fa fa-bars"></i>
   </div>
-
   <ul>
-    <li><a href="../tech_art/tech_art.html">Tech Art</a></li>
-    <li><a href="../tools/tools.html">Tools</a></li>
-    <li><a href="../vfx/vfx.html">VFX</a></li>
-    <li><a href="../games/games.html" class="active">Games</a></li>
+    <li><a href="./tech_art/tech_art.html">Tech Art</a></li>
+    <li><a href="./tools/tools.html">Tools</a></li>
+    <li><a href="./vfx/vfx.html">VFX</a></li>
+    <li><a href="./games/games.html" class="active">Games</a></li>
   </ul>
 </nav>
+
 
 
    
@@ -139,7 +137,8 @@ Have fun creating your portfolio on this template!!! -->
         <h1 class="hero-title">
           Hi, my name is <span class="text-color-main name">Miriam Martin</span>
           <br />
-          I'm a Technical artist/SoftwareEngineer.
+          I'm a Technical artist /<br/>
+          Game Developer.
         </h1>
         <p class="hero-cta">
           <a class="cta-btn cta-btn--hero" href="#contact">Get in touch</a>
@@ -181,676 +180,123 @@ Have fun creating your portfolio on this template!!! -->
         </div>
       </div>
     </section>
-    <!-- /END About Section -->
 
-    <!--Projects Section-->
-<section id="projects">
-      <div class="tab-buttons">
-        
-        <button class="tab-btn active" onclick="filterProjects('techart', this)">Tech Art</button>
-        <button class="tab-btn" onclick="filterProjects('vfx', this)">VFX</button>
-        <button class="tab-btn " onclick="filterProjects('tools', this)">Tools</button>
-        <button class="tab-btn" onclick="filterProjects('games', this)">Games</button>
-        <button class="tab-btn " onclick="filterProjects('software', this)">Software Engineering</button>
-      </div>
 
-      
-    <!-- tu artículo del exportador de Blender a Unity -->
-  </div>
-  <div class="project-tab techart">
-  <div class="container">
-        <div class="project-wrapper">
-          <h2 class="section-title dark-blue-text">Projects</h2>
 
-<article class="row">
-                  <div class="project-wrapper__text">
-                    <h3 class="project-wrapper__text-title">UI card </h3>
-                    <p class="project-wrapper__text-info">
-                  🃏 I created a UMG with different <strong>custom UI shaders</strong> in <strong>Unreal Engine</strong>.I created a holographic card shader that adds a twist and UV distortion to simulate the movement of the card.
-                     </p>
-                     <div class="project-wrapper__text-btns">
-                      <a
-                        href="https://www.artstation.com/artwork/XJXPgl"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="cta-btn cta-btn--hero cta-btn--projects"
-                        >See on ArtStation</a
-                      >
-                      
-                    </div>
-                  </div>
-      
-                   <div class="project-wrapper__image">
-              <a href="./assets/card.mp4" target="_blank" rel="noopener noreferrer">
-                <div class="thumbnail rounded">
-                  <video
-                  src="./assets/card.mp4"
-                  class="img-fluid"
-                  width="1366"
-                  height="767"
-                  controls
-                  alt="Project Video"
-                 
-                ></video>
-                </div>
+ <section id="featured-projects">
+    <div class="container">
+    <!-- Título de la sección -->
+    <h2 class="section-title">Featured Projects </h2>
+  <div class="carousel-wrapper">
+    <button class="carousel-btn prev">⟨</button>
+
+    <div class="carousel-track">
+      <!-- Item 1 -->
+      <div class="carousel-item">
+        <div class="project-card has-tab"onclick="window.location.href='../tech_art/uiCards.html'">
+          <video src="../assets/card.mp4" controls poster="../assets/ui.png" alt="Proyecto 1"></video>
+          <div class="project-info">
+            <h3>UI Card 🃏</h3>
+            <p>I created custom UI shaders in Unreal Engine, including a holographic card shader with UV distortion for animation.</p>
+          </div>
+          <div class="project-wrapper__text-btns">
+              <a href="https://www.artstation.com/artwork/XJXPgl" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--hero cta-btn--projects">
+                See on ArtStation
               </a>
-            </div>
-                </article>
-
-
-            <article class="row">
-                  <div class="project-wrapper__text">
-                <h3 class="project-wrapper__text-title">Cube Marching ⛰️</h3>
-                  <p class="project-wrapper__text-info">
-                    🧠 I developed a system in <strong>C++</strong> that generates <strong>procedural terrain</strong> using the <strong>Cube Marching algorithm</strong>. <br><br>
-                    🧱 The terrain is divided into chunks and can be dynamically <strong>modified in real time</strong>.
-                  </p>
-
-                     <div class="project-wrapper__text-btns">
-                      <a
-                        href="https://github.com/miriam-m-s/MarchingCubes"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="cta-btn cta-btn--hero cta-btn--projects"
-                        >See on GitHub</a
-                      >
-                      
-                    </div> 
-                  </div>
-      
-                   <div class="project-wrapper__image">
-              <a href="./assets/MarchingCubes.mp4" target="_blank" rel="noopener noreferrer">
-                <div class="thumbnail rounded">
-                  <video
-                  src="./assets/MarchingCubes.mp4"
-                  class="img-fluid"
-                  width="1366"
-                  height="767"
-                  controls
-                  alt="Project Video"
-             
-                ></video>
-                </div>
-              </a>
-            </div>
-                </article>
-         
-               <article class="row">
-                  <div class="project-wrapper__text">
-                    <h3 class="project-wrapper__text-title">Roots Growing🌿</h3>
-                    <p class="project-wrapper__text-info">
-                  
-
- 🌿 I developed a <strong>procedural tool in Houdini</strong> that generates <strong>organic roots wrapping around a given mesh</strong>.<br><br>
- 🎞️ The tool also creates a <strong>custom animation</strong> of the roots growing, exported using <strong>Vertex Animation Textures (VAT)</strong> for real-time use in Unreal Engine or other game engines.<br><br>
-🛠️ It’s designed to be fully procedural and artist-friendly, making it easy to apply to any input geometry.<br><br>
-
-
-
-
-
-                     </p>
-                     <!-- <div class="project-wrapper__text-btns">
-                      <a
-                        href="https://www.artstation.com/artwork/lDg8Vk"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="cta-btn cta-btn--hero cta-btn--projects"
-                        >See on ArtStation</a
-                      >
-                      
-                    </div> -->
-                  </div>
-      
-                   <div class="project-wrapper__image">
-              <a href="./assets/roots.mp4" target="_blank" rel="noopener noreferrer">
-                <div class="thumbnail rounded">
-                  <video
-                  src="./assets/roots.mp4"
-                  class="img-fluid"
-                  width="1366"
-                  height="767"
-                  controls
-                  alt="Project Video"
-                  poster="./assets/rootsPortada.png"
-                ></video>
-                </div>
-              </a>
-            </div>
-                </article>
-         
-
-        
-          <!-- /END Project -->
-                <!-- Each .row is a project -->
-                <article class="row">
-                  <div class="project-wrapper__text">
-                    <h3 class="project-wrapper__text-title">Cat card 🐈‍⬛</h3>
-                    <p class="project-wrapper__text-info">
-                  🃏 I created a <strong>custom shader</strong> in <strong>Unreal Engine</strong> that uses the <strong>stencil buffer</strong> to control the <strong>visibility</strong> of a <strong>3D model</strong>.<br><br>
-  🌀 When the card <strong>flips</strong>, the stencil hides the <strong>3D geometry</strong> to simulate a <strong>flat 2D appearance</strong>.<br><br>
-  🌈 I also added a <strong>subtle holographic effect</strong> that reacts dynamically to the <strong>camera’s direction</strong>.
-                     </p>
-                     <div class="project-wrapper__text-btns">
-                      <a
-                        href="https://www.artstation.com/artwork/lDg8Vk"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="cta-btn cta-btn--hero cta-btn--projects"
-                        >See on ArtStation</a
-                      >
-                      
-                    </div>
-                  </div>
-      
-                   <div class="project-wrapper__image">
-              <a href="./assets/thecart.mp4" target="_blank" rel="noopener noreferrer">
-                <div class="thumbnail rounded">
-                  <video
-                  src="./assets/thecart.mp4"
-                  class="img-fluid"
-                  width="1366"
-                  height="767"
-                  controls
-                  alt="Project Video"
-                  poster="./assets/carportada.png"
-                ></video>
-                </div>
-              </a>
-            </div>
-                </article>
-                      <!-- /END Project -->       
-           
-      
-                <!-- Each .row is a project -->
-          <article class="row">
-            <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">Snow Camping ❄️</h3>
-              <p class="project-wrapper__text-info">
-                 🌲 Creation of a <strong>diorama</strong> from scratch.<br><br>
-  🛠️ Developed all <strong>shaders</strong> and <strong>visual effects</strong>, managed <strong>forest distribution</strong> using <strong>PCGs (Procedural Content Generation)</strong>.<br><br>
-  💡 Also responsible for the <strong>scene’s lighting setup</strong>.
-               </p>
-               <div class="project-wrapper__text-btns">
-                <a
-                  href="https://www.artstation.com/artwork/JrkkAa"  
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="cta-btn cta-btn--hero cta-btn--projects"
-                  >See on ArtStation</a
-                >
-                
-              </div>
-            </div>
-
-            <div class="project-wrapper__image">
-              <a href="https://www.youtube.com/watch?v=vn0dmYFjHlA" target="_blank" rel="noopener noreferrer">
-                <div class="thumbnail rounded">
-                  <video
-                  src="./assets/env.mp4"
-                  class="img-fluid"
-                  width="1366"
-                  height="767"
-                  controls
-                  alt="Project Video"
-               
-                ></video>
-                </div>
-              </a>
-            </div>
-          </article>
-         
-         
+            </div> 
         </div>
       </div>
-</div>
-  <div class="project-tab tools">
-      <div class="container">
-          <div class="project-wrapper">
-            <h2 class="section-title dark-blue-text">Projects</h2>
-   <!-- Each .row is a project -->
-            <article class="row">
-              <div class="project-wrapper__text">
-                <h3 class="project-wrapper__text-title">Baking Tool</h3>
-                <p class="project-wrapper__text-info">
-                This tool is designed to optimize <strong>asset management</strong> and streamline the <strong>environment art workflow</strong>.<br><br>
-🛠️ Built in C++,Python and Blueprint <br><br>
-📦 It automatically merges all objects located within the <code>Props/Atlas/SceneFolderName</code> folder in the Outliner and generates a single <strong>merged static mesh</strong>.<br><br>
-🎨 Creates a <strong>texture atlas</strong> and generates the corresponding <strong>material instances</strong> for the merged mesh.<br><br>
-📁 The resulting assets are automatically  in the Content Browser.<br><br>
-⚡ This tool significantly improves optimization, enhances project performance, and reduces manual workload for  artists.<br><br>
 
+      <!-- Item 2 -->
+      <div class="carousel-item">
+         <div class="project-card has-tab" onclick="window.location.href='../tech_art/cubeMarching.html'">
+          <video src="../assets/MarchingCubes.mp4" controls poster="../assets/marcheo.png"></video>
+          <div class="project-info">
+            <h3>Cube Marching ⛰️</h3>
+            <p>Procedural terrain generated in C++ using Cube Marching. Terrain divided into chunks and dynamically modifiable in real time.</p>
+            <div class="project-wrapper__text-btns">
+              <a href="https://github.com/miriam-m-s/MarchingCubes" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--hero cta-btn--projects">
+                See on GitHub
+              </a>
+            </div> 
+          </div>
+        </div>
+      </div>
 
-                </p>
-                <div class="project-wrapper__text-btns">
-                  <a
-                    href="https://github.com/miriam-m-s/BakingMaterial"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="cta-btn cta-btn--hero cta-btn--projects"
-                    >Source Code</a
-                  >
-                
-                </div>
-              </div>
-
-                  <div class="project-wrapper__image">
-                <a href="./assets/BakingTool.mp4" target="_blank" rel="noopener noreferrer">
-                  <div class="thumbnail rounded">
-                    <video
-                    src="./assets/BakingTool.mp4"
-                    class="img-fluid"
-                    width="1366"
-                    height="767"
-                    controls
-                    alt="Project Video"
-                  ></video>
-                  </div>
-                </a>
-              </div>
-            </article>
-            <!-- Each .row is a project -->
-            <article class="row">
-              <div class="project-wrapper__text">
-                <h3 class="project-wrapper__text-title">Blender to Unity exporter</h3>
-                <p class="project-wrapper__text-info">
-                  This addon allows for exporting  <strong>Blender materials</strong> and objects to  <strong>Unity’s Universal Render Pipeline (URP)</strong>.<br><br>
-                  🛠️ Made using HLSL and Python.<br><br>
-                  🎨 It enables the export of procedural materials so that their appearance
-                    in Blender matches that in Unity.<br><br>
-                    📁 The addon generates a .shader 
-                    file, a .material file, an .fbx model, and a prefab 
-                    with the materials correctly applied.<br><br>
-                    🧠 Compatible with a large number of Blender nodes and easily extensible.<br><br>
-                </p>
-                <div class="project-wrapper__text-btns">
-                  <a
-                    href="https://github.com/TFG-MEP/Blender_to_Unity_Material_Export_Plug-in"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="cta-btn cta-btn--hero cta-btn--projects"
-                    >Source Code</a
-                  >
-                
-                </div>
-              </div>
-
-              <div class="project-wrapper__image">
-                <a href="./assets/addonUsage.gif" target="_blank" rel="noopener noreferrer">
-                  <div class="thumbnail rounded">
-                    <img
-                      src="./assets/addonUsage.gif"
-                      class="img-fluid"
-                      alt="Project Image"
-                      width="1366"
-                      height="767"
-                    />
-                  </div>
-                </a>
-              </div>
-            </article>
-            <!-- /END Project -->
-
-            <!-- Each .row is a project -->
-      
-
-            <article class="row">
-              <div class="project-wrapper__text">
-                <h3 class="project-wrapper__text-title">Eye Tracker</h3>
-                <p class="project-wrapper__text-info">
-                  This project, developed in <strong>Python</strong> captures the user's 
-                  gaze in real time 
-                  and maps the observed positions onto screen coordinates. 
-                  Additionally, it records the user's screen and synchronizes 
-                  gaze data with video footage, generating a 
-                  video that overlays visual indicators on the observed areas.
-                </p>
-                <div class="project-wrapper__text-btns">
-                  <a
-                    href="https://github.com/miriam-m-s/G3_Usabilidad_Pfinal"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="cta-btn cta-btn--hero cta-btn--projects"
-                    >Source Code</a
-                  >
-                  <!-- <a href="https://github.com/miriam-m-s/G3_Usabilidad_Pfinal" target="_blank" class="cta-btn text-color-main"
-                    >Source Code</a
-                  > -->
-                </div>
-              </div>
-
-              <div class="project-wrapper__image">
-                <a href="./assets/DemoEyeTracker.mp4" target="_blank" rel="noopener noreferrer">
-                  <div class="thumbnail rounded">
-                    <video
-                    src="./assets/DemoEyeTracker.mp4"
-                    class="img-fluid"
-                    width="1366"
-                    height="767"
-                    controls
-                    alt="Project Video"
-                  ></video>
-                  </div>
-                </a>
-              </div>
-            </article>
-    
-  </div>
+      <!-- Item 3 -->
+      <div class="carousel-item">
+       <div class="project-card">
+          <video src="../assets/LILITH.mp4" controls poster="../assets/LILO.jpg"></video>
+          <div class="project-info">
+            <h3>Lilith 🪽​​</h3>
+            <p>
+              <strong>Master’s final project</strong> developed at UCM and Voxel School.  
+              I handled all <strong>technical art</strong> tasks, including <strong>lighting</strong> setup and <strong>VFX design</strong> to create an immersive dark-fantasy atmosphere.
+            </p>
+            <div class="project-wrapper__text-btns">
+              <a href="https://store.steampowered.com/app/3587510/Lilith_Rise_of_the_Fallen/" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--hero cta-btn--projects">
+                See on Steam
+              </a>
+            </div> 
+          </div>
+        </div>
+      </div>
+       <div class="carousel-item">
+       <div class="project-card">
+          <video src="../assets/env.mp4" controls poster="../assets/snow.png"></video>
+          <div class="project-info">
+            <h3>Snow Camping ❄️</h3>
+            <p>Diorama creation with custom shaders and VFX, procedural forest placement with PCGs, and lighting setup.</p>
+            <div class="project-wrapper__text-btns">
+              <a href="https://www.artstation.com/artwork/JrkkAa" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--hero cta-btn--projects">
+                See on ArtStation
+              </a>
+            </div> 
+          </div>
+        </div>
+      </div>
+         <div class="carousel-item">
+       <div class="project-card">
+          <video src="../assets/thecart.mp4" controls poster="../assets/carportada.png"></video>
+          <div class="project-info">
+            <h3>Cat Card 🐈‍⬛</h3>
+            <p>Custom shader in Unreal Engine using stencil buffer to simulate flipping cards with dynamic holographic effect.</p>
+            <div class="project-wrapper__text-btns">
+              <a href="https://www.artstation.com/artwork/lDg8Vk" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--hero cta-btn--projects">
+                See on ArtStation
+              </a>
+            </div> 
+          </div>
+        </div>
+      <!-- Puedes agregar más items -->
     </div>
       </div>
 
-<div class="project-tab games">
-  
-        
-         
-   <div class="container">
-        <div class="project-wrapper">
-          <h2 class="section-title dark-blue-text">Projects</h2>
 
-            <article class="row">
-                  <div class="project-wrapper__text">
-                    <h3 class="project-wrapper__text-title">Lilith 🪽​​</h3>
-                    <p class="project-wrapper__text-info">
-  Lilith is a game developed as part of a master's program at the Complutense University of Madrid and Voxel School.<br><br>
-  🧪 I was in charge of all the <strong>technical art</strong> aspects.<br><br>
-  💡 I worked on the <strong>scene lighting</strong> to create the right atmosphere.<br><br>
-  ✨ I also designed and implemented all the <strong>visual effects (VFX)</strong> in the game.<br><br>
-</p>
+    <button class="carousel-btn next">⟩</button>
+  </div>  </div>
+</section>
 
-                     <div class="project-wrapper__text-btns">
-                      <a
-                        href="https://store.steampowered.com/app/3587510/Lilith_Rise_of_the_Fallen/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="cta-btn cta-btn--hero cta-btn--projects"
-                        >See on Steam</a
-                      >
-                      
-                    </div>
-                  </div>
-      
-                  <div class="project-wrapper__image">
-                    <a href="./assets/LILITH.mp4" target="_blank" rel="noopener noreferrer">
-                      <div class="thumbnail rounded">
-                        <video
-                        src="./assets/LILITH.mp4"
-                        class="img-fluid"
-                        width="1366"
-                        height="767"
-                        controls
-                        alt="Project Video"
-                        
-                      ></video>
-                      </div>
-                    </a>
-                  </div>
-                </article>
-
-        
-          <!-- /END Project -->
-                <!-- Each .row is a project -->
-                <article class="row">
-                  <div class="project-wrapper__text">
-                    <h3 class="project-wrapper__text-title">Ping PongPa 🫧</h3>
-                    <p class="project-wrapper__text-info">
-                      A game created in Unity during the Global GameJam 2025. 
-                      Cooperate with a teammate, parrying the spikes doing ping-pong as they approach the bubble!      
-                     </p>
-                     <div class="project-wrapper__text-btns">
-                      <a
-                        href="https://juegosasados.itch.io/pingpompa"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="cta-btn cta-btn--hero cta-btn--projects"
-                        >See on Itchio</a
-                      >
-                      
-                    </div>
-                  </div>
-      
-                  <div class="project-wrapper__image">
-                    <a href="./assets/PING-POMPA .mp4" target="_blank" rel="noopener noreferrer">
-                      <div class="thumbnail rounded">
-                        <video
-                        src="./assets/PING-POMPA .mp4"
-                        class="img-fluid"
-                        width="1366"
-                        height="767"
-                        controls
-                        alt="Project Video"
-                        
-                      ></video>
-                      </div>
-                    </a>
-                  </div>
-                </article>
-                      <!-- /END Project -->       
-           
-      
-                <!-- Each .row is a project -->
-          <article class="row">
-            <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">I am afraid of Lemons 🍋</h3>
-              <p class="project-wrapper__text-info">
-                A game created in Unity during the Global GameJam 2024. 
-                In this game, you play as the owner of a store, 
-                where each day reveals a new part of an unfolding story.
-                 As the days pass, you must uncover clues and piece together
-                  the truth hidden within the narrative, all while managing 
-                  the daily operations of your store.         
-               </p>
-               <div class="project-wrapper__text-btns">
-                <a
-                  href="https://juegosasados.itch.io/limones"  
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="cta-btn cta-btn--hero cta-btn--projects"
-                  >See on Itchio</a
-                >
-                
-              </div>
-            </div>
-
-            <div class="project-wrapper__image">
-              <a href="./assets/lemon.mp4" target="_blank" rel="noopener noreferrer">
-                <div class="thumbnail rounded">
-                  <video
-                  src="./assets/lemon.mp4"
-                  class="img-fluid"
-                  width="1366"
-                  height="767"
-                  controls
-                  alt="Project Video"
-                  poster="./assets/PORTADA.png"
-                ></video>
-                </div>
-              </a>
-            </div>
-          </article>
-           
-        </div>
-      </div>
-</div>
-<div class="project-tab vfx">
+ 
+<section id="see-more">
   <div class="container">
-        <div class="project-wrapper">
-          <h2 class="section-title dark-blue-text">Projects</h2>      
-            <article class="row">
-                  <div class="project-wrapper__text">
-                    <h3 class="project-wrapper__text-title">Autumn Waterfall 🍂</h3>
-                    <p class="project-wrapper__text-info">
-                        Vfx made in <strong>Niagara</strong> Unreal Engine.<br></br>
-                      💧 Created a <strong>stylized waterfall shader</strong> and a <strong>water shader</strong> that uses <strong>distance fields</strong> to simulate <strong>waves</strong> on meshes intersecting with the <strong>water surface</strong>.<br><br>
+    <h2 class="section-title">See More of My Work</h2>
+    <p class="section-subtitle">Explore other areas of my portfolio</p>
 
-                     
-                     </p>
-                     <div class="project-wrapper__text-btns">
-                      <a
-                        href="https://www.artstation.com/artwork/L4gkn5"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="cta-btn cta-btn--hero cta-btn--projects"
-                        >See on ArtStation</a
-                      >
-                      
-                    </div>
-                  </div>
-      
-                   <div class="project-wrapper__image">
-              <a href="./assets/waterfall.mp4" target="_blank" rel="noopener noreferrer">
-                <div class="thumbnail rounded">
-                  <video
-                  src="./assets/waterfall.mp4"
-                  class="img-fluid"
-                  width="1366"
-                  height="767"
-                  controls
-                  alt="Project Video"
-          
-                ></video>
-                </div>
-              </a>
-            </div>
-                </article>
-              <article class="row">
-                  <div class="project-wrapper__text">
-                    <h3 class="project-wrapper__text-title">Houdini Sea</h3>
-                    <p class="project-wrapper__text-info">
-                      This project integrates a <strong>Houdini FLIP water simulation</strong> with an <strong>ocean surface system</strong> including foam (whitewater) and a detailed fluid mesh.<br><br>
-🌊 Simulates a realistic crashing wave.<br><br>
-🎥 Built using Houdini’s FLIP solver, whitewater system.<br><br>
-🧪 Focused on achieving believable interaction between fluid dynamics and ocean shaders.<br><br>
+    <div class="see-more-links">
+      <a href="../tech_art/tech_art.html" class="cta-btn">Tech Art</a>
+  <a href="../tools/tools.html" class="cta-btn">Tools</a>
+  <a href="../vfx/vfx.html" class="cta-btn">VFX</a>
+  <a href="../games/games.html" class="cta-btn">Games</a>
+    </div>
+  </div>
+</section>
 
-                     
-                     </p>
-                     <div class="project-wrapper__text-btns">
-                      <a
-                        href="https://www.artstation.com/artwork/L4gkn5"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="cta-btn cta-btn--hero cta-btn--projects"
-                        >See on ArtStation</a
-                      >
-                      
-                    </div>
-                  </div>
-      
-                   <div class="project-wrapper__image">
-              <a href="./assets/waterfall.mp4" target="_blank" rel="noopener noreferrer">
-                <div class="thumbnail rounded">
-                  <video
-                  src="./assets/SeaFinal.mp4"
-                  class="img-fluid"
-                  width="1366"
-                  height="767"
-                  poster="./assets/sea.png"
-                  controls
-                  alt="Project Video"
-          
-                ></video>
-                </div>
-              </a>
-            </div>
-                </article>
+
+
+        
          
-        </div>
-      </div>
-</div>
-
-  <div class="project-tab software">
-      <div class="container">
-          <div class="project-wrapper">
-            <h2 class="section-title dark-blue-text">Projects</h2>
-
-    
-
-            <!-- Each .row is a project -->
-            <article class="row">
-              <div class="project-wrapper__text">
-                <h3 class="project-wrapper__text-title">CrazyU / Separity</h3>
-                <p class="project-wrapper__text-info">
-                  <strong>Separity</strong> is a game engine created for the Project 3 course at Complutense University.<br><br>
-                  🛠️ Made in C++.<br><br>
-                  📚 The engine's development incorporates the following libraries: <strong>Physics</strong> (Bullet 3D), <strong>User Interface</strong> (OgreOverlay), <strong>Graphics</strong> (Ogre), <strong>Input</strong> (Ogre::SDL), <strong>Scripting and Scenes</strong> (Luabridge), and <strong>Audio</strong> (FMOD).<br><br>
-                  🎮 In addition to the engine, a game called <em><strong>Crazy U</strong></em> was developed using it.
-                </p>
-                
-                
-                <div class="project-wrapper__text-btns">
-                  <a
-                    href="https://github.com/XupappInc/Separity"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="cta-btn cta-btn--hero cta-btn--projects"
-                    >Source Code</a
-                  >
-                  
-                </div>
-              </div>
-
-              <div class="project-wrapper__image">
-                <a href="./assets/Crazyu.png" target="_blank" rel="noopener noreferrer">
-                  <div class="thumbnail rounded">
-                    <img
-                      src="./assets/Crazyu.png"
-                      class="img-fluid"
-                      alt="Project Image"
-                      width="1366"
-                      height="767"
-                    />
-                  </div>
-                </a>
-              </div>
-            </article>
-
-         
-            
-            <!-- /END Project -->
-            <article class="row">
-              <div class="project-wrapper__text">
-                <h3 class="project-wrapper__text-title">Master-Mind</h3>
-                <p class="project-wrapper__text-info">
-                  A mobile adaptation of the classic 'Mastermind' game, developed for Android.<br><br>
-                
-                  🛠️ Created using Java in Android Studio.<br><br>
-                
-                  📱 Key mobile features include notifications, ads, sharing options, and more.<br><br>
-                
-                  🧠 The code is well-organized, with a clear separation between the game logic and the engine.<br><br>
-                
-                  🪙 Includes a customizable reward and monetization system.
-                </p>
-                
-                <div class="project-wrapper__text-btns">
-                  <a
-                    href="https://github.com/Lauu029/Moviles"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="cta-btn cta-btn--hero cta-btn--projects"
-                    >Source Code</a
-                  >
-                
-                </div>
-              </div>
-
-              <div class="project-wrapper__image">
-                <a href="./assets/moviles.gif" target="_blank" rel="noopener noreferrer">
-                  <div class="thumbnail rounded">
-                    <img
-                      src="./assets/moviles.gif"
-                      class="img-fluid"
-                      alt="Project Image"
-                      width="1366"
-                      height="767"
-                    />
-                  </div>
-                </a>
-              </div>
-              
-            </article>
-          </div>
-        </div>
-</section>   
+  
     <!-- End Projects Section -->
 
     <!-- Contact Section -->
@@ -950,12 +396,69 @@ Have fun creating your portfolio on this template!!! -->
     filterProjects('techart', document.querySelector('.tab-btn.active'));
   });
 
-   const menu = document.getElementById('mobile-menu');
+ const menu = document.getElementById('mobile-menu');
   const navbar = document.getElementById('navbar');
 
   menu.addEventListener('click', () => {
     navbar.classList.toggle('active');
   });
+
+window.addEventListener('load', () => {
+  const navbar = document.getElementById('navbar');
+  navbar.classList.add('loaded'); // luego en CSS, puedes animar solo .loaded
+});
+window.addEventListener("scroll", () => {
+  const nav = document.querySelector(".navbar");
+  if (window.scrollY > 50) nav.classList.add("scrolled");
+  else nav.classList.remove("scrolled");
+});
+
+
+
+const track = document.querySelector('.carousel-track');
+const items = Array.from(track.children);
+const prevBtn = document.querySelector('.carousel-btn.prev');
+const nextBtn = document.querySelector('.carousel-btn.next');
+
+let index = 0; // elemento central actual
+const n = items.length;
+
+function updateCarousel() {
+    const itemWidth = items[0].offsetWidth;
+    const trackWidth = track.parentElement.offsetWidth;
+
+    // Offset para centrar el elemento actual
+    const offset = trackWidth / 2 - itemWidth / 2 - index * itemWidth;
+
+    track.style.transition = 'transform 0.5s ease';
+    track.style.transform = `translateX(${offset}px)`;
+
+    // Aplicar clase "center" solo al elemento central
+    items.forEach((item, i) => {
+        item.classList.toggle('center', i === index);
+    });
+}
+
+// Botón siguiente
+nextBtn.addEventListener('click', () => {
+    index = (index + 1) % n;
+    updateCarousel();
+});
+
+// Botón anterior
+prevBtn.addEventListener('click', () => {
+    index = (index - 1 + n) % n;
+    updateCarousel();
+});
+
+// Inicializar
+window.addEventListener('load', () => updateCarousel());
+window.addEventListener('resize', () => updateCarousel()); // recalcular al cambiar tamaño
+
+
+
+
+
 </script>
 
   </body>

@@ -89,7 +89,7 @@
 
 <body>
   <!-- Navbar -->
-<nav id="navbar">
+ <nav id="navbar">
   <a class="logo" href="../index.html">Miriam Martin</a>
 
   <!-- Botón hamburguesa (solo visible en móvil) -->
@@ -100,8 +100,8 @@
   <ul>
     <li><a href="../tech_art/tech_art.html">Tech Art</a></li>
     <li><a href="../tools/tools.html">Tools</a></li>
-    <li><a href="../vfx/vfx.html">VFX</a></li>
-    <li><a href="../games/games.html" class="active">Games</a></li>
+    <li><a href="../vfx/vfx.html" class="active">VFX</a></li>
+    <li><a href="../games/games.html" >Games</a></li>
   </ul>
 </nav>
 
@@ -168,4 +168,12 @@
     </div>
   </footer>
 </body>
+<script>
+  const menu = document.getElementById('mobile-menu');
+  const navbar = document.getElementById('navbar');
+
+  menu.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+  });
+</script>
 </html>
