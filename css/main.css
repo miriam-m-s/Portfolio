@@ -1158,17 +1158,3 @@ nav#navbar ul {
   flex-wrap: wrap;
 }
 
-.see-more-links .cta-btn {
-  padding: 1rem 2rem;
-  font-size: 1.6rem;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #36d1dc, #5b86e5);
-  color: white; /* asegúrate de que el color sea visible */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 1; /* siempre visible */
-}
-
-.see-more-links .cta-btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
