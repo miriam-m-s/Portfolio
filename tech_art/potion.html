@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Miriam | SH_WaterShader</title>
+
+<link rel="icon" type="image/png" href="../assets/devfolio-logo.png">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="./project.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<style>
+
+/* ---------- LAYOUT ---------- */
+.section-space {
+    margin-top: 60px;
+}
+.code-wrapper{
+    background:#1e1e1e;
+    border-radius:12px;
+    padding:15px;
+    overflow-x:auto;
+}
+
+/* 🔥 clave: fuerza alineación a la izquierda */
+pre{
+    margin:0;
+    text-align:left !important;
+    font-family: Consolas, monospace;
+    font-size: 0.9rem;
+    color:#dcdcdc;
+
+    white-space: pre; /* mantiene indentación real */
+}
+
+code{
+    display:block;
+    text-align:left !important;
+}
+.card-dark {
+    background: #111827;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.25);
+}
+
+.card-dark h2, .card-dark h3 { color: white; }
+.card-dark p { color: #c3cad8; }
+
+/* ---------- SPLIT LAYOUT ---------- */
+.project-split-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; 
+    gap: 40px;
+    align-items: start;
+}
+
+/* New layout for the bottom showcase */
+.showcase-split-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    background: linear-gradient(135deg,#10141d,#1a2233);
+    padding: 40px;
+    border-radius: 24px;
+    margin-top: 60px;
+}
+
+.vertical-video-stack {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.vertical-video-stack video {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ---------- BUTTON ---------- */
+.code-btn {
+    background: #00d2ff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: .25s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.code-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,210,255,.25);
+}
+
+/* ---------- FEATURE GRID ---------- */
+.feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.feature-item {
+    background: rgba(255,255,255,.05);
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.feature-item b { color: #00d2ff; }
+
+.params-list {
+    margin-top: 18px;
+    padding-left: 18px;
+    list-style-type: none;
+}
+
+.params-list li {
+    margin-bottom: 12px;
+    color: #c3cad8; /* Adjusted for dark background */
+    position: relative;
+}
+
+.params-list li::before {
+    content: "→";
+    position: absolute;
+    left: -20px;
+    color: #00d2ff;
+}
+.copy-btn{
+    background:#00d2ff;
+    border:none;
+    padding:8px 12px;
+    border-radius:8px;
+    cursor:pointer;
+    color:white;
+    font-weight:700;
+}
+
+.close-btn{
+    background:#333;
+    border:none;
+    padding:8px 12px;
+    border-radius:8px;
+    cursor:pointer;
+    color:white;
+}
+/* ---------- VIDEO ---------- */
+.showcase-video {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* ---------- MODAL ---------- */
+.code-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.85);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.code-modal.active { display: flex; }
+
+.code-modal-content {
+    width: 100%;
+    max-width: 800px;
+    background: #1e1e1e;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width: 1000px) {
+    .project-split-grid, .showcase-split-grid {
+        grid-template-columns: 1fr;
+    }
+    .vertical-video-stack {
+        order: -1;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav id="navbar">
+    <a class="logo" href="../index.html">Miriam Martin</a>
+    <div class="menu-toggle" id="mobile-menu"><i class="fa fa-bars"></i></div>
+    <ul>
+        <li><a href="../tech_art/tech_art.html" class="active">Tech Art</a></li>
+        <li><a href="../tools/tools.html">Tools</a></li>
+        <li><a href="../vfx/vfx.html">VFX</a></li>
+        <li><a href="../games/games.html">Games</a></li>
+    </ul>
+</nav>
+
+<header class="hero">
+    <div class="hero-grid">
+        <div>
+            <h1 class="hero-title">SH_WaterShader: Technical Potion 🧪</h1>
+            <p class="hero-sub">
+                A Unity URP shader simulating reactive volumetric liquid. 
+                Driven by HLSL+ShaderGraph math and C# inertia physics forthe sloshing effect.
+            </p>
+            <div style="margin-top:22px;">
+                <a class="code-btn" href="../assets/code/Liquid.cs" target="_blank">
+                <i class="fa-solid fa-code"></i> View C# Code
+            </a>
+            </div>
+        </div>
+
+        <div style="display:flex;align-items:center;justify-content:center">
+            <div class="card-dark" style="width:100%;max-width:340px;">
+                <h3>Quick Details</h3>
+                <div class="meta" style="margin-top:12px;">
+                    <span class="pill">Unity URP</span>
+                    <span class="pill">HLSL</span>
+                    <span class="pill">C#</span>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="content">
+
+    <section class="section-space">
+        <div class="project-split-grid">
+            
+            <div class="info-column">
+                <div class="info-card">
+                    <h2>Technical Overview 🛠️</h2>
+                    <p style="margin-top:12px;">
+                        This project focuses on simulating fluid physics within a container without 3D fluid particles. 
+                        By using <b>Object-Space calculations</b>, the shader determines the liquid's tilt based on the bottle's velocity.
+                    </p>
+                    
+                    <h4 style="margin-top:24px;">Core Features</h4>
+                    <div class="feature-grid">
+                        <div class="feature-item"><b>Dynamic Fill:</b> Height clipping via _WaterQuantity.</div>
+                        <div class="feature-item"><b>Reactive Slosh:</b> Rotation driven by C# inertia.</div>
+                        <div class="feature-item"><b>Procedural Bubbles:</b> Time-animated textures.</div>
+                        <div class="feature-item"><b>Foam Edge:</b> Border threshold detection.</div>
+                        <div class="feature-item"><b>Fresnel:</b> Camera-angle dependent edge glow.</div>
+                        <div class="feature-item"><b>Double Sided:</b> Interior rendering for glass.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vertical-video-stack">
+                <video src="../assets/potion/tw.mp4" autoplay loop muted playsinline></video>
+                <video src="../assets/potion/tw2.mp4" autoplay loop muted playsinline></video>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="showcase-split-grid">
+        
+        <div class="video-container">
+            <h2 style="color: white; margin-bottom: 10px;">Parameter Demonstration 🎥</h2>
+            <p style="color: #b8c2d6; margin-bottom: 20px;">Dynamic preview of runtime changes affecting fill, waves, and color response.</p>
+            <video class="showcase-video" src="../assets/potion/shadervideo.mp4" controls autoplay loop muted playsinline></video>
+        </div>
+
+        <div class="params-container">
+            <h2 style="color: white;">Material Properties 🎛️</h2>
+            <p style="color: #b8c2d6; margin-top:12px;">Fully exposed parameters for real-time art direction:</p>
+            <ul class="params-list">
+                <li><b>Fill Level:</b> Precise control over liquid volume.</li>
+                <li><b>Wave Intensity:</b> Adjustable sloshing amplitude.</li>
+                <li><b>Bubble Velocity:</b> Speed of procedural particle rise.</li>
+                <li><b>Shaking Color:</b> Dynamic color shift during movement.</li>
+                <li><b>Foam Threshold:</b> Thickness of the surface contact foam.</li>
+                <li><b>Fresnel Color:</b> Edge glow tint and intensity.</li>
+            </ul>
+        </div>
+
+    </section>
+
+</main>
+
+  <footer class="footer">
+    <div class="container">
+      <a href="#hero" class="back-to-top" aria-label="go back to top">
+        <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+      </a>
+      <div class="social-links">
+        <a href="https://miriam_m_s.artstation.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-artstation"></i></a>
+        <a href="https://www.linkedin.com/in/miriam-martin-sanchez-947b3b189/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/miriam-m-s" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+      </div>
+      
+     
+    </div>
+  </footer>
+
+
+
+<script>
+    const menu = document.getElementById("mobile-menu");
+    const navbar = document.getElementById("navbar");
+    menu.addEventListener("click", () => navbar.classList.toggle("active"));
+
+    function openCodeModal() { document.getElementById("codeModal").classList.add("active"); }
+    function closeCodeModal() { document.getElementById("codeModal").classList.remove("active"); }
+    function copyCode(){
+    const code = document.getElementById("codeBlock").innerText;
+
+    navigator.clipboard.writeText(code)
+        .then(() => {
+            alert("Code copied!");
+        })
+        .catch(err => {
+            console.error("Copy failed", err);
+        });
+}
+    window.onclick = (e) => { if(e.target.id == "codeModal") closeCodeModal(); }
+</script>
+
+</body>
+</html>
